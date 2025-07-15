@@ -148,7 +148,7 @@
       <iframe src="https://youtube.com/embed/WfWMJiPh48k?si=ufkEfimJ8iBltBsf" allowfullscreen></iframe>
     </div>
   </div>
-
+  
   <script>
     function showTopic(topicId) {
       document.querySelectorAll('.topic').forEach(topic => {
@@ -159,5 +159,66 @@
     // Default topic
     showTopic('python');
   </script>
+  <!-- 💬 Chat Toggle Button -->
+<button id="chatToggleBtn" onclick="toggleChatbot()" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4a00e0;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+">💬</button>
+
+<!-- 🤖 Codexa Chatbot Iframe -->
+<iframe 
+  id="codexaChat"
+  src="https://app.agentx.so/shared-chat/?agent=68767a482b52cccf314d34cf"
+  width="350"
+  height="500"
+  style="
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 999;
+  ">
+</iframe>
+
+<!-- 🧠 Toggle Script -->
+<script>
+  function toggleChatbot() {
+    const chatFrame = document.getElementById('codexaChat');
+    chatFrame.style.display = chatFrame.style.display === 'none' ? 'block' : 'none';
+  }
+</script>
+<!-- Link to Codexa Chat Page -->
+<a href="chat.html" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4a00e0;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+">
+  💬 
+</a>
+
 </body>
 </html>
+<!-- Your existing HTML remains unchanged above -->
+
+
